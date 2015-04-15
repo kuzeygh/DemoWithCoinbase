@@ -14,6 +14,7 @@
 		84293CEF1ADF02D30094C582 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84293CEE1ADF02D30094C582 /* Images.xcassets */; };
 		84293CF21ADF02D30094C582 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84293CF01ADF02D30094C582 /* LaunchScreen.xib */; };
 		84293CFE1ADF02D30094C582 /* DemoWithCoinbaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84293CFD1ADF02D30094C582 /* DemoWithCoinbaseTests.m */; };
+		BE1E853C457C854E70D84E25 /* libPods-DemoWithCoinbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E646EFF34C455224F4E945E7 /* libPods-DemoWithCoinbase.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		649A23F9607B57D8C5A3D49F /* Pods-DemoWithCoinbase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoWithCoinbase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoWithCoinbase/Pods-DemoWithCoinbase.debug.xcconfig"; sourceTree = "<group>"; };
 		84293CDE1ADF02D30094C582 /* DemoWithCoinbase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoWithCoinbase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84293CE21ADF02D30094C582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84293CE31ADF02D30094C582 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		84293CF71ADF02D30094C582 /* DemoWithCoinbaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoWithCoinbaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84293CFC1ADF02D30094C582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84293CFD1ADF02D30094C582 /* DemoWithCoinbaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoWithCoinbaseTests.m; sourceTree = "<group>"; };
+		CC4987055B24E0CC31686CD8 /* Pods-DemoWithCoinbase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoWithCoinbase.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoWithCoinbase/Pods-DemoWithCoinbase.release.xcconfig"; sourceTree = "<group>"; };
+		E646EFF34C455224F4E945E7 /* libPods-DemoWithCoinbase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoWithCoinbase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1E853C457C854E70D84E25 /* libPods-DemoWithCoinbase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		395B5FAAD93BBF5F6FD25CA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E646EFF34C455224F4E945E7 /* libPods-DemoWithCoinbase.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C44911A43C77DAEA1C5DDEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				649A23F9607B57D8C5A3D49F /* Pods-DemoWithCoinbase.debug.xcconfig */,
+				CC4987055B24E0CC31686CD8 /* Pods-DemoWithCoinbase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		84293CD51ADF02D30094C582 = {
 			isa = PBXGroup;
 			children = (
 				84293CE01ADF02D30094C582 /* DemoWithCoinbase */,
 				84293CFA1ADF02D30094C582 /* DemoWithCoinbaseTests */,
 				84293CDF1ADF02D30094C582 /* Products */,
+				6C44911A43C77DAEA1C5DDEE /* Pods */,
+				395B5FAAD93BBF5F6FD25CA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84293D011ADF02D30094C582 /* Build configuration list for PBXNativeTarget "DemoWithCoinbase" */;
 			buildPhases = (
+				1A3A6A3EDCEA897407B5ECF1 /* Check Pods Manifest.lock */,
 				84293CDA1ADF02D30094C582 /* Sources */,
 				84293CDB1ADF02D30094C582 /* Frameworks */,
 				84293CDC1ADF02D30094C582 /* Resources */,
+				82F936EBE04D2DC1B88284C1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A3A6A3EDCEA897407B5ECF1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82F936EBE04D2DC1B88284C1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoWithCoinbase/Pods-DemoWithCoinbase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84293CDA1ADF02D30094C582 /* Sources */ = {
@@ -345,6 +404,7 @@
 		};
 		84293D021ADF02D30094C582 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 649A23F9607B57D8C5A3D49F /* Pods-DemoWithCoinbase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoWithCoinbase/Info.plist;
@@ -355,6 +415,7 @@
 		};
 		84293D031ADF02D30094C582 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4987055B24E0CC31686CD8 /* Pods-DemoWithCoinbase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoWithCoinbase/Info.plist;
@@ -416,6 +477,7 @@
 				84293D031ADF02D30094C582 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84293D041ADF02D30094C582 /* Build configuration list for PBXNativeTarget "DemoWithCoinbaseTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +486,7 @@
 				84293D061ADF02D30094C582 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
